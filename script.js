@@ -14,7 +14,7 @@ const bands =  ['The Plot in You',
 				'An Old Dog'];
 
 function remove (ch){
-	return ch.replace(/^(a|an|the)/i,"");
+	return ch.replace(/^(a |an |the )/i,"");
 }
 
 bands.sort((a,b) => {
