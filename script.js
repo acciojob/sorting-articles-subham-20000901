@@ -14,21 +14,21 @@ const bands =  ['The Plot in You',
 				'An Old Dog'];
 
 function remove (ch){
-	return ch.replace(/^(a,an,the)/i,"");
+	return ch.replace(/^(a|an|the)/i,"");
 }
 
 bands.sort((a,b) => {
 	let s1 = remove(a).toLowerCase();
-	let s2 = remove(a).toLowerCase();
+	let s2 = remove(b).toLowerCase();
 	if(s1<s2) return -1;
 	else if(s1>s2) return 1;
 	return 0;
 })
 
-const ul = document.getElementById("bands");
+const ul = document.getElementById("band");
 
 for(let i=0; i<bands.length; i++){
 	let li = document.createElement("li");
-	li.innertext = bands[i];
+	li.innerText = bands[i];
 	ul.appendChild(li);
 }
