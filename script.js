@@ -1,4 +1,5 @@
 //your JS code here. If required.
+document.addEventListener("DOMContentLoaded", function () {
 const bands =  ['The Plot in You',
 				'The Devil Wears Prada',
 				'Pierce the Veil',
@@ -13,18 +14,16 @@ const bands =  ['The Plot in You',
 	           'Anywhere But Here',
 				'An Old Dog'];
 
-function remove (ch){
+     function remove (ch){
 	return ch.replace(/^(a |an |the )/i,"").trim();
-}
-
-bands.sort((a,b) => {
+   }
+    bands.sort((a,b) => {
 	let s1 = remove(a).toLowerCase();
 	let s2 = remove(b).toLowerCase();
 	if(s1<s2) return -1;
 	else if(s1>s2) return 1;
 	return 0;
 })
-
 const ul = document.getElementById("band");
 
 for(let i=0; i<bands.length; i++){
@@ -32,3 +31,4 @@ for(let i=0; i<bands.length; i++){
 	li.innerText = bands[i];
 	ul.appendChild(li);
 }
+});
