@@ -6,7 +6,7 @@ const bands =  ['The Plot in You',
 				'The Bled',
 				'Say Anything',
 				'The Midway State',
-				'We Came as Roma',
+				'We Came as Romans',
 				'Counterparts',
 				'Oh, Sleeper',
 				'A Skylit Drive',
@@ -14,7 +14,7 @@ const bands =  ['The Plot in You',
 				'An Old Dog'];
 
 function remove (ch){
-	return ch.replace(/^(a |an |the )/i,"");
+	return ch.replace(/^(a |an |the )/i,"").trim();
 }
 
 bands.sort((a,b) => {
