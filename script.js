@@ -24,7 +24,7 @@ const bands =  ['The Plot in You',
 	else if(s1>s2) return 1;
 	return 0;
 })
-const ul = document.getElementById("band");
+const ul = document.getElementById("bands");
 
 for(let i=0; i<bands.length; i++){
 	let li = document.createElement("li");
